@@ -34,5 +34,10 @@
 		"typescript": "^6.0.3",
 		"typescript-eslint": "^8.60.1",
 		"vite": "^8.0.16"
+	},
+	"dependencies": {
+		"@fontsource/barlow": "^5.2.8",
+		"@fontsource/barlow-condensed": "^5.2.8",
+		"@fontsource/bellefair": "^5.2.8"
 	}
 }
