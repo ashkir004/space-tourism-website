@@ -29,6 +29,7 @@
 @layer base {
     body {
         @apply font-sans antialiased;
+        background: var(--color-secondary);
     }
 }
 
