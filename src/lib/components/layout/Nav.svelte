@@ -12,8 +12,7 @@
 
     let RootBaseClass = `hidden md:flex bg-primary text-primary-foreground
         flex-row items-stretch justify-start gap-8
-        text-labels-sm md:text-labels-md lg:text-labels-lg uppercase h-full
-        `;
+        text-labels-sm md:text-labels-md lg:text-labels-lg uppercase h-full`;
 
     let ListBaseClass = `flex flex-row items-stretch justify-start gap-12 h-full`;
 
@@ -25,8 +24,9 @@
 
     let activeItemClass = `border-b-2 border-b-foreground`;
 
-    let linkBaseClass = `hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground
-    `;
+    let linkBaseClass = `hover:bg-transparent hover:text-primary-foreground focus:bg-transparent focus:text-primary-foreground
+    active:bg-transparent active:text-primary-foreground [&[data-active=true]]:bg-transparent [&[data-active=true]]:text-primary-foreground
+    flex flex-row gap-3`;
 
     let navItems = [
         { id: 1, title: "Home", href: "/" },
@@ -37,15 +37,16 @@
 
     let activeId = $state(1);
 </script>
-
 <NavigationMenu.Root class={cn(RootBaseClass, className)}>
+    <span class="md:hidden absolute lg:block lg:w-50 lg:left-5 xl:w-[64%] xl:left-10 top-1/2 h-px -translate-x-full bg-gray-500 z-10 " aria-hidden="true"></span>
+    <span class="absolute block inset-0  bg-secondary/10 backdrop-blur-lg" aria-hidden="true"></span>
     <NavigationMenu.List class={cn(ListBaseClass, className)}>
 
         {#each navItems as navItem (navItem.id) }
             <NavigationMenu.Item class={cn(ItemBaseClass, navItem.id === activeId ? activeItemClass : '')} onclick={() => activeId = navItem.id}>
                 
                 <NavigationMenu.Link href={navItem.href} class={cn(linkBaseClass)}>
-                    {navItem.title}
+                    <span class="font-bold">{navItem.id.toLocaleString().padStart(2, '0')}</span>{navItem.title}
                 </NavigationMenu.Link>
             </NavigationMenu.Item>
         {/each}
