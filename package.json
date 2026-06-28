@@ -38,6 +38,8 @@
 	"dependencies": {
 		"@fontsource/barlow": "^5.2.8",
 		"@fontsource/barlow-condensed": "^5.2.8",
-		"@fontsource/bellefair": "^5.2.8"
+		"@fontsource/bellefair": "^5.2.8",
+		"clsx": "^2.1.1",
+		"tailwind-merge": "^3.6.0"
 	}
 }
