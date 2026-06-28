@@ -1,6 +1,6 @@
 <script lang="ts">
     import Logo from "../../assets/shared/logo.svg";
-    // import Nav from "./Nav.svelte";
+    import Nav from "./Nav.svelte";
 
 	import MenuControls from "../ui/MenuControls.svelte";
     import { cn } from "$lib/utils/utils";
@@ -18,17 +18,15 @@
 
 </script>
 
-<div class={cn(`grid grid-cols-1 grid-rows-1`, className)}>
-    <div class="col-span-full row-span-full flex flex-row items-center justify-start lg:justify-start py-8">
+<div class={cn(`grid grid-cols-1 grid-rows-1 outline-1`, className)}>
+    <div class="col-span-full row-span-full flex flex-row items-center justify-between md:min-h-24 py-4 md:py-0 pl-4">
 
         <button>
-            <img src={Logo} alt="Logo" class="min-w-5" />
+            <img src={Logo} alt="Logo" class="max-w-10" />
         </button>
 
-        <!-- <div class="flex flex-row items-center justify-end gap-12 lg:w-full">
-            <Nav class="hidden lg:flex lg:flex-row gap-12" />
-        </div> -->
+        <Nav class="justify-self-stretch" />
         
-        <MenuControls isOpen={menuOpen} toggle={toggle} class="lg:hidden ml-auto mr-6 md:mr-15 {menuOpen ? 'hidden' : ''}" />
+        <MenuControls isOpen={menuOpen} toggle={toggle} class="md:hidden ml-auto mr-6 md:mr-15 {menuOpen ? 'hidden' : ''}" />
     </div>
 </div>
