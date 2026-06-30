@@ -36,12 +36,12 @@
 
     let navItems = [
         { id: 0, title: "Home", href: "/" },
-        { id: 1, title: "Destination", href: "#destination" },
-        { id: 2, title: "Crew", href: "#crew" },
-        { id: 3, title: "Technology", href: "#technology" }
+        { id: 1, title: "Destination", href: "/destination" },
+        { id: 2, title: "Crew", href: "/crew" },
+        { id: 3, title: "Technology", href: "/technology" }
     ];
 
-    let activeId = $state(1);
+    let activeId = $state(0);
 </script>
 <NavigationMenu.Root class={cn(RootBaseClass, className)}>
     <span class="md:hidden absolute lg:block lg:w-50 lg:left-5 xl:w-[64%] xl:left-10 top-1/2 h-px -translate-x-full bg-gray-500 z-10 " aria-hidden="true"></span>
