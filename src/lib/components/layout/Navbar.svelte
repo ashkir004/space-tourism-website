@@ -1,20 +1,23 @@
 <script lang="ts">
     import Logo from "../../assets/shared/logo.svg";
     import Nav from "./Nav.svelte";
+    import Menu from "./Menu.svelte";
 
 	import MenuControls from "../ui/MenuControls.svelte";
     import { cn } from "$lib/utils/utils";
 
     interface NavbarProps {
         class?: string;
-        menuOpen?: boolean;
-        toggle?: () => void;
     }
 
     let { class: className = '',
-        menuOpen = false,
-        toggle = () => {}
      }: NavbarProps = $props();
+
+     let menuOpen = $state(false);
+
+     function toggle() {
+         menuOpen = !menuOpen;
+     }
 
 </script>
 
@@ -30,4 +33,5 @@
         
         <MenuControls isOpen={menuOpen} toggle={toggle} class="md:hidden ml-auto mr-6 md:mr-15 {menuOpen ? 'hidden' : ''}" />
     </div>
+    <Menu isOpen={menuOpen} toggle={toggle} class="md:hidden {!menuOpen ? 'hidden' : ''} " />
 </div>
