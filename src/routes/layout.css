@@ -96,7 +96,7 @@
         line-height: 1.8;
     }
     
-    @media (min-width: 768px) {
+    @media (min-width: 48rem) {
         .text-heading {
             font-family: var(--font-serif);
             font-size: 1.75rem;
@@ -112,7 +112,7 @@
         }
     }
     
-    @media (min-width: 1024px) {
+    @media (min-width: 64rem) {
         .text-heading {
             font-family: var(--font-serif);
             font-size: 2rem;
@@ -129,7 +129,7 @@
         
     }
     
-    @media (min-width: 1280px) {
+    @media (min-width: 80rem) {
         .text-heading {
             font-family: var(--font-serif);
             font-size: 3.5rem;
