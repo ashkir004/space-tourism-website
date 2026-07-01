@@ -79,11 +79,11 @@
     /* text preset 2 */
     .text-display {
         font-family: var(--font-serif);
-        font-size: calc(80 / 16 * 1rem);
+        font-size: calc(56 / 16 * 1rem);
         line-height: auto;
 
         @media (width >= 48rem) {
-            font-size: calc(100 / 16 * 1rem);
+            font-size: calc(80 / 16 * 1rem);
         }
 
         @media (width >= 80rem) {
@@ -106,6 +106,22 @@
 
         @media (width >= 80rem) {
             font-size: calc(56 / 16 * 1rem);
+        }
+    }
+
+    .text-page-heading {
+        font-family: var(--font-sans-condensed);
+        font-size: calc(16 / 16 * 1rem);
+        line-height: auto;
+        letter-spacing: 0.143em;
+        text-transform: uppercase;
+
+        @media (width >= 48rem) {
+            font-size: calc(20 / 16 * 1rem);
+        }
+
+        @media (width >= 80rem) {
+            font-size: calc(28 / 16 * 1rem);
         }
     }
 
@@ -150,10 +166,6 @@
         @media (width >= 48rem) {
             font-size: calc(16 / 16 * 1rem);
         }
-
-        @media (width >= 64rem) {
-            font-size: calc(28 / 16 * 1rem);
-        }
     }
 
     /* text preset 8 */
@@ -172,8 +184,18 @@
         line-height: 1.8;
 
         @media (width >= 48rem) {
+            font-size: calc(16 / 16 * 1rem);
+        }
+
+        @media (width >= 48rem) {
             font-size: calc(18 / 16 * 1rem);
         }
+    }
+
+    .text-value {
+        font-family: var(--font-serif);
+        font-size: calc(28 / 16 * 1rem);
+        line-height: auto;
     }
 }
 
